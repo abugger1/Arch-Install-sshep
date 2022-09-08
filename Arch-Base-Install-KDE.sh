@@ -15,7 +15,16 @@ makepkg -si --noconfirm
 
 pikaur -S powerpill
 
-powerpill -S ttf-fira-code zsh zsh-completions kitty-git kitty-terminfo
+sudo powerpill -S ttf-fira-code zsh zsh-completions kitty-git kitty-terminfo
+
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+sh install.sh
+
+cd ~
+wget https://github.com/dracula/zsh/archive/master.zip
+uinzip master.zip
+cd master
+mv dracula.zsh-theme $HOME/.oh-my-zsh/themes
 
 #pikaur -S --noconfirm system76-power
 #sudo systemctl enable --now system76-power
