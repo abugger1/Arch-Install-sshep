@@ -41,6 +41,7 @@ sudo pacman -S xsel pip
 pip install pynvim
 npm a -g neovim
 fc-cache -fv
+git clone https://github.com/abugger1/ranger ~/.config/ranger
 git clone https://github.com/abugger1/zsh ~/.config/zsh
 cp ~/.config/zsh/.zshenv ~
 #
