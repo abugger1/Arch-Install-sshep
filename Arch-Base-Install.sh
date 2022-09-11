@@ -12,12 +12,6 @@
 #
 #
 #
-# Install pikaur
- git clone https://aur.archlinux.org/pikaur.git
- cd pikaur
- makepkg -si --noconfirm
- cd
- rm -r pikaur
 #
 #
 #
