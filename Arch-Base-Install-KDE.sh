@@ -37,16 +37,18 @@ sudo pikaur -S powerpill zramd
 #
 # sh -c "$(curl -fsSL https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh)"
 git clone --bare https://github.com/abugger1/.cfg ~/.cfg
-git clone https://github.com/ChristianChiarulli/nvim ~/.config/nvim
-sudo pacman -S xsel pip
+git clone https://github.com/abugger1/neovim ~/.config/nvim
+sudo pacman -S xsel pip npm
 pip install pynvim
-npm a -g neovim
-fc-cache -fv
+npm -i g neovim
+npm install plugin-build
 git clone https://github.com/abugger1/ranger ~/.config/ranger
 git clone https://github.com/abugger1/zsh ~/.config/zsh
 cp ~/.config/zsh/.zshenv ~
 #
- sudo systemctl enable sddm
+
+
+sudo systemctl enable sddm
  echo "do not forget ranger"
 # /bin/echo -e "\e[1;32mREBOOTING IN 5..4..3..2..1..\e[0m"
 # sleep 5
