@@ -2,7 +2,7 @@
 
 ln -sf /usr/share/zoneinfo/US/Eastern /etc/localtime
 hwclock --systohc
-sed -i '177s/.//' /etc/locale.gen
+sed -i '171s/.//' /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 echo "arch" >> /etc/hostname
@@ -38,12 +38,12 @@ echo root:password | chpasswd
  cp /arch-install-sshep/makepkg.conf /etc/makepkg.conf
 #
 #
- pacman -Syy github-cli efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools base-devel linux-zen-headers avahi xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups hplip alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync reflector acpi acpi_call tlp virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat iptables-nft ipset firewalld flatpak sof-firmware nss-mdns acpid os-prober ntfs-3g
+ pacman -Syy github-cli efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools base-devel avahi xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups hplip alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync acpi acpi_call tlp virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat iptables-nft ipset firewalld flatpak sof-firmware nss-mdns acpid os-prober ntfs-3g
 # pacman -S grub   
 #
 # pacman -S --noconfirm xf86-video-intel
 # pacman -S --noconfirm xf86-video-amdgpu
-# pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
+# pacman -S --noconfirm nvidia-dkms nvidia-utils nvidia-settings
 #
 #
 # grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB #change the directory to /boot/efi if you mounted the EFI partition at /boot/efi
