@@ -65,7 +65,8 @@ echo root:password | chpasswd
 #
  useradd -m sshep
  echo sshep:password | chpasswd
-# usermod -aG libvirt "USER"
+ usermod -aG libvirt "sshep"
+ usermod -aG libvirt-qemu "sshep"
 #
  echo "sshep ALL=(ALL) ALL" >> /etc/sudoers.d/sshep
 #
