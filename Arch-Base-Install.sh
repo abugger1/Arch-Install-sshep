@@ -43,7 +43,7 @@ pacman -Syy lazygit github-cli efibootmgr networkmanager network-manager-applet 
 #
 # pacman -S --noconfirm xf86-video-intel
 # pacman -S --noconfirm xf86-video-amdgpu
-# pacman -S --noconfirm nvidia-dkms nvidia-utils nvidia-settings
+ # pacman -S --noconfirm nvidia-dkms nvidia-utils nvidia-settings lib32-nvidia-utils opencl-nvidia
 #
 #
 # grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB #change the directory to /boot/efi if you mounted the EFI partition at /boot/efi
