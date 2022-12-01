@@ -21,7 +21,7 @@ sudo pikaur -S powerpill zramd
 #
  sudo systemctl enable --now zramd.service
 #
- sudo powerpill -S python nerd-fonts-fira-code zsh zsh-completions kitty-git kitty-terminfo timeshift-bin timeshift-autosnap unzip cmake zoxide fzf
+ sudo powerpill -S kvantum python nerd-fonts-fira-code zsh zsh-completions kitty-git kitty-terminfo timeshift-bin timeshift-autosnap unzip cmake zoxide fzf
 #
 #
 # 
