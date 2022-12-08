@@ -34,8 +34,8 @@ echo root:password | chpasswd
  pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
  pacman-key --lsign-key FBA220DFC880C036
  pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
- cp /arch-install-sshep/pacman.conf /etc/pacman.conf
- cp /arch-install-sshep/makepkg.conf /etc/makepkg.conf
+ cp /Arch-Install-sshep/pacman.conf /etc/pacman.conf
+ cp /Arch-Istall-sshep/makepkg.conf /etc/makepkg.conf
 #
 #
 pacman -Syy lazygit github-cli efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools base-devel avahi xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups hplip alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync acpi acpi_call tlp virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat iptables-nft ipset firewalld flatpak sof-firmware nss-mdns acpid os-prober ntfs-3g
@@ -43,7 +43,7 @@ pacman -Syy lazygit github-cli efibootmgr networkmanager network-manager-applet 
 #
 # pacman -S --noconfirm xf86-video-intel
 # pacman -S --noconfirm xf86-video-amdgpu
- # pacman -S --noconfirm nvidia-dkms nvidia-utils nvidia-settings lib32-nvidia-utils opencl-nvidia
+# pacman -S --noconfirm nvidia-dkms nvidia-utils nvidia-settings lib32-nvidia-utils opencl-nvidia
 #
 #
 # grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB #change the directory to /boot/efi if you mounted the EFI partition at /boot/efi
