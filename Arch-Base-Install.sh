@@ -13,6 +13,7 @@ echo root:password | chpasswd
 # INSTALL SCRIPT FOR ARCH PROGRAMS I USE
 # Updating mirrorlist
 #
+ pacman -Sy reflector
  reflector --country 'United States' --latest 20 --protocol https --sort rate --save /etcpacman.d/mirrorlist
 #
 # Install Ucode
@@ -38,8 +39,8 @@ echo root:password | chpasswd
  cp /Arch-Istall-sshep/makepkg.conf /etc/makepkg.conf
 #
 #
-pacman -Syy lazygit github-cli efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools base-devel avahi xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups hplip alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync acpi acpi_call tlp virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat iptables-nft ipset firewalld flatpak sof-firmware nss-mdns acpid os-prober ntfs-3g
-# pacman -S grub   
+pacman -Syy lazygit github-cli efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools base-devel avahi xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups hplip alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync acpi acpi_call tlp virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat iptables-nft ipset firewalld flatpak sof-firmware nss-mdns acpid ntfs-3g
+# pacman -S grub os-prober  
 #
 # pacman -S --noconfirm xf86-video-intel
 # pacman -S --noconfirm xf86-video-amdgpu
@@ -65,8 +66,8 @@ pacman -Syy lazygit github-cli efibootmgr networkmanager network-manager-applet 
 #
  useradd -m sshep
  echo sshep:password | chpasswd
- usermod -aG libvirt "sshep"
- usermod -aG libvirt-qemu "sshep"
+# usermod -aG libvirt "sshep"
+# usermod -aG libvirt-qemu "sshep"
 #
  echo "sshep ALL=(ALL) ALL" >> /etc/sudoers.d/sshep
 #
