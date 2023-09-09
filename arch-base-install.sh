@@ -39,7 +39,11 @@ echo root:password | chpasswd
  cp /Arch-Istall-sshep/makepkg.conf /etc/makepkg.conf
 #
 #
- pacman -Syy lazygit github-cli efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools base-devel avahi xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups hplip alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync acpi acpi_call tlp virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat iptables-nft ipset firewalld flatpak sof-firmware nss-mdns acpid ntfs-3g
+ pacman -Syy lazygit github-cli efibootmgr networkmanager network-manager-applet dialog wpa_supplicant \
+        mtools dosfstools base-devel xdg-utils gvfs gvfs-smb nfs-utils inetutils bluez bluez-utils \
+        alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync \
+        acpi acpi_call tlp virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat \
+        iptables-nft ipset firewalld flatpak sof-firmware nss-mdns acpid ntfs-3g
 #
 # pacman -S grub os-prober  
 #
@@ -55,11 +59,8 @@ echo root:password | chpasswd
 #
  systemctl enable NetworkManager
  systemctl enable bluetooth
- systemctl enable cups.service
  systemctl enable sshd
- systemctl enable avahi-daemon
  systemctl enable tlp # You can comment this command out if you didn't install tlp, see above
- systemctl enable reflector.timer
  systemctl enable fstrim.timer
  systemctl enable libvirtd
  systemctl enable firewalld
@@ -67,11 +68,11 @@ echo root:password | chpasswd
 #
  useradd -m sshep
  echo sshep:password | chpasswd
-# usermod -aG libvirt "sshep"
-# usermod -aG libvirt-qemu "sshep"
+ usermod -aG libvirt "sshep"
+ usermod -aG libvirt-qemu "sshep"
  usermod -aG docker "sshep"
+ usermod -aG wheel "sshep"
  #
  echo "sshep ALL=(ALL) ALL" >> /etc/sudoers.d/sshep
 #
 #
- printf "\e[1;32mDone! Type exit, umount /mnt -R and reboot.\e[0m"
