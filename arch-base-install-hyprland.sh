@@ -52,6 +52,11 @@ paru -Syy hyprland-git hyprpicker-git waybar-git dunst ngw-look wf-recorder wlog
 #
 # sh -c "$(curl -fsSL https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh)"
  git clone --bare https://github.com/abugger1/.cfg ~/.cfg
+#
+#
+ git clone https://github.com/linuxmobile/hyprland-dots $HOME/Downloads/hyprland-dots/
+cd $HOME/Downloads/hyprland-dots/
+rsync -avxHAXP --exclude '.git*' .* ~/
 # git clone https://github.com/abugger1/ranger ~/.config/ranger
 # git clone https://github.com/abugger1/zsh ~/.config/zsh
 # cp ~/.config/zsh/.zshenv ~
