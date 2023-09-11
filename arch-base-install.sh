@@ -11,8 +11,16 @@ echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 echo root:password | chpasswd
 # INSTALL SCRIPT FOR ARCH PROGRAMS I USE
-# Updating mirrorlist
+ pacman -S archlinux-keyring
+ pacman-key --init
+ pacman-key --populate
+ pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+ pacman-key --lsign-key 3056513887B78AEB
+ pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+ cp /Arch-Install-sshep/pacman.conf /etc/pacman.conf
+ cp /Arch-Istall-sshep/makepkg.conf /etc/makepkg.conf
 #
+# Updating mirrorlist
  pacman -Sy reflector
  reflector --country 'United States' --latest 20 --protocol https --sort rate --save /etcpacman.d/mirrorlist
 #
@@ -29,31 +37,20 @@ echo root:password | chpasswd
 #
 #
 # Install chaoticAUR and mirrorlist
- pacman -S archlinux-keyring
- pacman-key --init
- pacman-key --populate
- pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
- pacman-key --lsign-key 3056513887B78AEB
- pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
- cp /Arch-Install-sshep/pacman.conf /etc/pacman.conf
- cp /Arch-Istall-sshep/makepkg.conf /etc/makepkg.conf
 #
 #
  pacman -Syy lazygit github-cli efibootmgr networkmanager network-manager-applet dialog wpa_supplicant \
-        mtools dosfstools base-devel xdg-utils gvfs gvfs-smb nfs-utils inetutils bluez bluez-utils \
-        alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync \
-        acpi acpi_call tlp virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat \
-        iptables-nft ipset firewalld flatpak sof-firmware nss-mdns acpid ntfs-3g
-#
-# pacman -S grub os-prober  
+  mtools dosfstools base-devel xdg-utils gvfs gvfs-smb nfs-utils inetutils bluez bluez-utils \
+  alsa-utils pipewire pipewire-alsa pipewire-pulse pipewire-jack bash-completion openssh rsync \
+  acpi acpi_call tlp edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat \
+  iptables-nft ipset firewalld flatpak sof-firmware nss-mdns acpid ntfs-3g
 #
 # pacman -S --noconfirm xf86-video-intel
 # pacman -S --noconfirm xf86-video-amdgpu
 # pacman -S --noconfirm nvidia-dkms nvidia-utils nvidia-settings lib32-nvidia-utils opencl-nvidia
 #
-#
+# pacman -S grub os-prober  
 # grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB #change the directory to /boot/efi if you mounted the EFI partition at /boot/efi
-#
 # grub-mkconfig -o /boot/grub/grub.cfg
 #
 #
@@ -66,12 +63,11 @@ echo root:password | chpasswd
  systemctl enable firewalld
  systemctl enable acpid
 #
- useradd -m sshep
+ useradd -m sshep -s /bin/zsh
  echo sshep:password | chpasswd
- usermod -aG libvirt "sshep"
- usermod -aG libvirt-qemu "sshep"
- usermod -aG docker "sshep"
- usermod -aG wheel "sshep"
+# usermod -aG libvirt "sshep"
+# usermod -aG libvirt-qemu "sshep"
+# usermod -aG docker "sshep"
  #
  echo "sshep ALL=(ALL) ALL" >> /etc/sudoers.d/sshep
 #
