@@ -39,7 +39,7 @@
 # cargo install nu --features=dataframe
  cargo install starship
 #
-paru -S hyprland-nvidia-git python hyprpicker-git waybar-git  \
+paru -S hyprland-nvidia-git python hyprpicker-git waybar-hyprland-git  \
  dunst nwg-look wf-recorder wlogout wlsunset        \
  colord ffmpegthumbnailer gnome-keyring grimblast-git gtk-engine-murrine \
  imagemagick kvantum pamixer playerctl polkit-kde-agent qt5-quickcontrols        \
