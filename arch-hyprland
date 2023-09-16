@@ -53,7 +53,7 @@ paru -S hyprland-nvidia-git python hyprpicker-git waybar-hyprland-git  \
  catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-mocha papirus-icon-theme sddm-git swaylock-effects-git kvantum kvantum-theme-catppuccin-git           \
  obs-studio-rc ffmpeg-obs cef-minimal-obs-rc-bin             \
  pipewire pipewire-alsa pipewire-audio pipewire-pulse         \
- pipewire-jack wireplumber gst-plugin-pipewire pavucontrol swww pywal
+ pipewire-jack wireplumber gst-plugin-pipewire pavucontrol tutanota-desktop-bin 
 # sh -c "$(curl -fsSL https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh)"
 # git clone --bare https://github.com/abugger1/.cfg ~/.cfg
 #
