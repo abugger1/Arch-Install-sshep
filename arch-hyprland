@@ -49,7 +49,7 @@ paru -S hyprland-nvidia-git python hyprpicker-git waybar-hyprland-git  \
  btop cava neofetch noise-suppression-for-voice                   \
  rofi-lbonn-wayland-git rofi-emoji starship zsh viewnior ocs-url           \
  firefox brave-bin file-roller noto-fonts noto-fonts-cjk ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-firacode-nerd            \
- noto-fonts-emoji thunar thunar-archive-plugin           \
+ noto-fonts-emoji thunar thunar-archive-plugin swww pywal spicetify spotify mpv ani-cli           \
  catppuccin-gtk-theme-macchiato catppuccin-gtk-theme-mocha papirus-icon-theme sddm-git swaylock-effects-git kvantum kvantum-theme-catppuccin-git           \
  obs-studio-rc ffmpeg-obs cef-minimal-obs-rc-bin             \
  pipewire pipewire-alsa pipewire-audio pipewire-pulse         \
