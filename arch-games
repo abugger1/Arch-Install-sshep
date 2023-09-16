@@ -1,0 +1,55 @@
+#!bin/bash
+
+#
+#
+# -------------------------------------
+# Install flatpak			|
+# -------------------------------------
+#
+sudo pacman -Syu flatpak
+
+#
+#
+# ------------------------------------
+# Install Steam			       |
+# ------------------------------------
+#
+flatpak install flathub com.valvesoftware.Steam
+# flatpak run com.valvesoftware.Steam
+
+#
+#
+# -------------------------------------
+# Install heroic			|
+# -------------------------------------
+#
+flatpak install flathub com.heroicgameslauncher.hgl
+# flatpak run com.heroicgameslauncher.hgl
+
+#
+#
+# -------------------------------------
+# Install lutrus			|
+# -------------------------------------
+#
+flatpak install flathub net.lutris.Lutris
+# flatpak run net.lutris.Lutris
+
+#
+#
+# -------------------------------------
+# Install proton-up-qt			|
+# -------------------------------------
+#
+flatpak install flathub net.davidotek.pupgui2
+# flatpak run net.davidotek.pupgui2
+
+#
+#
+# ------------------------------------
+# Install Bottles		       |
+# ------------------------------------
+#
+flatpak install flathub com.usebottles.bottles
+# flatpak run com.usebottles.bottles
+
